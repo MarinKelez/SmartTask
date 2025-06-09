@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>SmartTask</title>
+</head>
+<body>
+    <header class="flex">
+        <h2>SmartTask</h2>
+        <div id="filter" class="flex">
+            <h4>Filters:</h4>
+            <select name="completion" id="completion">
+                <option value="All">Completion</option>
+                <option value="All">All</option>
+                <option value="true">Completed</option>
+                <option value="false">Active</option>
+            </select>
+            <select name="priority" id="priority">
+                <option value="All">Priority</option>
+                <option value="All">All</option>
+                <option value="Low">Low</option>
+                <option value="Mid">Mid</option>
+                <option value="High">High</option>
+            </select>
+        </div>
+    </header>
+    <main>
+        <h1 id="welcome-message">Welcome back!</h1>
+        <button id="showNewTask">New Task</button>
+        <div id="newTaskContainer">
+            <h2 id="tasksContainerTitle">New Task</h2>
+            <label for="newTaskTitle">Title: <input type="text" id="newTaskTitle"></label>
+            <label for="newTaskDue">Due: <input type="date" id="newTaskDue"></label>
+            <div>
+                <label for="newTaskPriority">Priority: </label>
+                <label for="Low"><input type="radio" name="newTaskPriority" id="Low" value="Low"> Low</label>
+                <label for="Mid"><input type="radio" name="newTaskPriority" id="Mid" value="Mid"> Mid</label>
+                <label for="High"><input type="radio" name="newTaskPriority" id="High" value="High"> High</label>
+            </div>
+            <div id="buttons" class="flex">
+                <button id="submitNewTask">Submit</button>
+                <button id="hideTasksContainer">Hide</button>
+            </div>
+        </div>
+        <div id="tasksContainer">
+            <h2>Your Tasks</h2>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
